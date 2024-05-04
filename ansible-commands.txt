@@ -17,3 +17,5 @@ add inv as :
 ansible -i inv WEB -m ping -e ansible_user=centos -e ansible_password=DevOps321
 
 ansible-playbook -i /home/centos/inv -e ansible_user=centos -e ansible_password=DevOps321 install-nginx.yml
+
+ansible-playbook -i frontend-dev.jdevops.online, -e ansible_user=centos -e ansible_password=DevOps321 frontend.yml 
