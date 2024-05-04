@@ -1,0 +1,17 @@
+ansible -i 18.209.7.62,  all -m ping -e ansible_user=centos -e ansible_password=DevOps321
+ansible -i 3.80.97.88,18.209.7.62  all -m ping -e ansible_user=centos -e ansible_password=DevOps321
+
+
+add inv :
+----------
+ansible -i inv all -m ping -e ansible_user=centos -e ansible_password=DevOps321
+
+add inv as :
+---------------
+[APP]
+18.209.7.62
+
+[WEB]
+3.80.97.88
+
+ansible -i inv WEB -m ping -e ansible_user=centos -e ansible_password=DevOps321

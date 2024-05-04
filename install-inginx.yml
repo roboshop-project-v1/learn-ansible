@@ -1,0 +1,10 @@
+- name: Install the latest version of nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: latest
+
+- name: Nginx Systemd enable and restart
+  ansible.builtin.systemd_service:
+    state: started
+    name: nginx
+    enabled: true
