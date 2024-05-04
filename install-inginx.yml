@@ -1,5 +1,7 @@
 - name: Inginx Installation
   hosts: WEB
+  vars:
+    URL: google.com
   become: true
   tasks:
     - name: Install the latest version of nginx
@@ -12,5 +14,3 @@
         state: started
         name: nginx
         enabled: true
-
-
