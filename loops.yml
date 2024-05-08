@@ -7,10 +7,12 @@
       - banana
       - orange
     sweets:
-      badusha:
+      sweet: 
+        name: badusha
         stock_available: true
         price: 100K
-      jilebi:
+      sweet:
+        name: jilebi
         stock_available: false
         price: 200K
         from: AP
@@ -18,4 +20,8 @@
     - name: Accesing the list variables
       ansible.builtin.debug:
         msg: "fruits name = {{ item }}"
-      loop : "{{fruits}}"
+      loop: "{{fruits}}"
+    - name: Accessing the dict variables
+      ansible.builtin.debug:
+        msg: "Seet Names Are {{ item.sweet.name }}"
+      loop: "{{sweets}}"
