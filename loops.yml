@@ -6,16 +6,6 @@
       - apple
       - banana
       - orange
-    sweets:
-      sweet: 
-        name: badusha
-        stock_available: true
-        price: 100K
-      sweet:
-        name: jilebi
-        stock_available: false
-        price: 200K
-        from: AP
   tasks:
     - name: Accesing the list variables
       ansible.builtin.debug:
@@ -23,5 +13,7 @@
       loop: "{{fruits}}"
     - name: Accessing the dict variables
       ansible.builtin.debug:
-        msg: "Seet Names Are {{ item.sweet.name }}"
-      loop: "{{sweets}}"
+        msg: "Seet Names is {{ item.name }} and price is{{item.price}}"
+      loop: 
+        {name: badusha , price: 20}
+        {name: jilebhi , price: 10}
