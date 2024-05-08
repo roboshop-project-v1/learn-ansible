@@ -17,5 +17,5 @@
   tasks:
     - name: Accesing the list variables
       ansible.builtin.debug:
-        msg: fruits name = {{ item }}
-      loop : {{fruits}}
+        msg: "fruits name = {{ item }}"
+      loop : "{{fruits}}"
