@@ -11,9 +11,10 @@
       ansible.builtin.debug:
         msg: "fruits name = {{ item }}"
       loop: "{{fruits}}"
+
     - name: Accessing the dict variables
       ansible.builtin.debug:
         msg: "Seet Names is {{ item.name }} and price is{{item.price}}"
       loop: 
-        {name: badusha , price: 20}
-        {name: jilebhi , price: 10}
+        - {name: badusha , price: 20}
+        - {name: jilebhi , price: 10}
