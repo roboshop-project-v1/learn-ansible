@@ -1,0 +1,21 @@
+- name: Loops in Ansible
+  hosts: localhost
+  connection: local
+  vars:
+    fruits:
+      - apple
+      - banana
+      - orange
+    sweets:
+      badusha:
+        stock_available: true
+        price: 100K
+      jilebi:
+        stock_available: false
+        price: 200K
+        from: AP
+  tasks:
+    - name: Accesing the list variables
+      ansible.builtin.debug:
+        msg: fruits name = {{ item }}
+      loop : {{fruits}}
