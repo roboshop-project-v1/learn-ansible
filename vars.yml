@@ -1,7 +1,6 @@
 - name: Variable Example
-  host: localhost
+  hosts: localhost
   connection: local
-  became: true
   vars:
     URL: google.com vars inside vars.yml file
   roles: 
